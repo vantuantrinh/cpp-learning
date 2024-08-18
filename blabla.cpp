@@ -1,17 +1,30 @@
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+
 int main(){
-    int n;
-    printf( "\n nhap n:");
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n-i;j++){
-            printf("~");
-        }int cnt=2;
-        for( int j=1;j<=2*i-1;j++){
-            if(j<i) printf("%d",cnt), cnt+=2;
-            else printf("%d",cnt), cnt-=2;
+    int t;
+    scanf("%d",&t);
+    getchar();
+    while(t--){
+        char c[1000];
+        fgets(c);
+        strstr(c);
+        char a[10][100];
+        int n=0;
+        char *token = strtok(c," ");
+        while(token != NULL){
+            strcpy(a[n++],token);
+            token = strtok(NULL," ");
 
         }
+        printf("%s",a[n-1]);
+        for(int i=0;i<n-1;i++){
+            printf("%c",a[i][0]);
+        }
+        printf("@gmail.com");
         printf("\n");
     }
+
 }
